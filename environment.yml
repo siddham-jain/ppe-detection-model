@@ -1,0 +1,12 @@
+name: ppe_detect 
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.8
+  - pytorch 
+  - numpy
+  - pip
+  - pip:
+      - opencv-python
+      - ultralytics
