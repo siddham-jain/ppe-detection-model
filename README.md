@@ -2,9 +2,9 @@
 
 This project has been developed in line with the Syook AI internship assignment requirements.
 
-Assignment doc link: [link](!https://github.com/siddham-jain/ppe-detection-model/blob/master/Syook%20-%20AI%20Internship%20-%20Assignment.pdf)
+Assignment doc link: [link](https://github.com/siddham-jain/ppe-detection-model/blob/master/Syook%20-%20AI%20Internship%20-%20Assignment.pdf)
 
-Project Report: [link](!https://github.com/siddham-jain/ppe-detection-model/blob/master/Project_Report_PPE_Detection_Model.pdf)
+Project Report: [link](https://github.com/siddham-jain/ppe-detection-model/blob/master/Project_Report_PPE_Detection_Model.pdf)
 
 ## Project Structure
 | Directory| Content 
