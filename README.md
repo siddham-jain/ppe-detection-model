@@ -44,6 +44,11 @@ python3 inference.py <input_dir> <output_dir> <path_to_person_detection_model> <
 ```
 Person detection and ppe detection model are stored in in weights directory of this project.
 
+If you want to access this app through UI, use:
+```bash
+streamlit run app.py
+```
+
 
 
 
