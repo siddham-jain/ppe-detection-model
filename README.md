@@ -6,6 +6,18 @@ Assignment doc link: [link](!https://github.com/siddham-jain/ppe-detection-model
 
 Project Report: [link](!https://github.com/siddham-jain/ppe-detection-model/blob/master/Project_Report_PPE_Detection_Model.pdf)
 
+## Project Structure
+| Directory| Content 
+|----------|-----
+| `dataset_utils` | This directory contains all the scripts i used to modify my dataset. 
+| `output` | This directory contains output image when i ran inference on `test_data`
+| `runs` | This directory was created during training of ppe detection model. I exported this from colab after i finished with the training of the model.
+| `test_data` | This directory comtains data for testing the final pipeline
+| `training` | This directory contains colab notebooks which i used for training my models
+| `weights` | This directory contains all the final model which are being used in my `inference.py`
+| `dataset.zip` | This is the zip file for datasets which i used for training person detection and ppe detection model
+
+
 ## Setup Instructions
 1. Clone this repository
     ```bash

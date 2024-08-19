@@ -1,5 +1,6 @@
+# script to remove a class from the labels of the dataset
+# Usage: python modify_cropped_labels.py
 import os
-import shutil
 
 dataset_path = '/home/siddham/ml-models/ppe-detection/datasets/ppe_dataset'
 class_id_to_drop = 4

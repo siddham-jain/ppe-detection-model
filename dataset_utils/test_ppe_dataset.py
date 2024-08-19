@@ -1,5 +1,7 @@
+# test script to draw bounding boxes on images using YOLO format labels to check if the labels have been converted successfully for the PPE dataset
+# Usage: python draw_boxes.py <images_dir> <labels_dir> <output_dir>
+
 import os, cv2, random, argparse, sys
-import numpy as np
 
 def draw_boxes(images_dir, labels_dir, output_dir):
     os.makedirs(output_dir, exist_ok=True)

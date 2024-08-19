@@ -1,3 +1,6 @@
+# script to convert YOLO format annotations for person detection to cropped images
+# Usage: python convert_annotations.py <input_dir> <output_dir>
+
 import os
 import cv2
 import numpy as np

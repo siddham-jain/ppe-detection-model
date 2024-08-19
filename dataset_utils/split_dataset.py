@@ -1,3 +1,6 @@
+# script to filter out labels except person label and split a dataset into train, validation, and test sets
+# Usage: python split_dataset.py <src_dir> <dest_dir> [--split_ratios SPLIT_RATIOS]
+
 import os, shutil, random, argparse, sys
 from pathlib import Path
 

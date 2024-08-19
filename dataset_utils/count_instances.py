@@ -1,3 +1,6 @@
+# script to count instances of each class in YOLO format labels
+# Usage: python count_instances.py <labels_dir>
+
 import os
 from collections import Counter
 import pandas as pd

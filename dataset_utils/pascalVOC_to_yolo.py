@@ -1,3 +1,6 @@
+# script to convert Pascal VOC annotations to YOLO format in place
+# Usage: python pascalVOC_to_yolo.py <input_dir>
+
 import os
 import xml.etree.ElementTree as ET
 import argparse

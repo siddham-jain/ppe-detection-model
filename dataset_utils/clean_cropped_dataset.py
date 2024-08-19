@@ -1,3 +1,5 @@
+# Script to clear empty label files and corresponding images in a dataset.
+# Usage: python clean_cropped_dataset.py <label_dir> <image_dir>
 import os
 import argparse, sys
 

@@ -1,3 +1,6 @@
+# script to filter person labels from YOLO format label files
+# Usage: python filter_person_labels.py <input_labels_dir> <output_labels_dir>
+
 import os, argparse, sys
 
 def filter_labels(input_labels_dir, output_labels_dir):
