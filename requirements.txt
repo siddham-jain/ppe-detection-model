@@ -1,4 +1,5 @@
-pytorch 
 opencv-python
 numpy
 ultralytics
+streamlit
+pytorch
