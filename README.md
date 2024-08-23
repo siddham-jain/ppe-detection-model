@@ -12,7 +12,7 @@ Project Report: [link](https://github.com/siddham-jain/ppe-detection-model/blob/
 | `dataset_utils` | This directory contains all the scripts i used to modify my dataset. 
 | `output` | This directory contains output image when i ran inference on `test_data`
 | `runs` | This directory was created during training of ppe detection model. I exported this from colab after i finished with the training of the model.
-| `test_data` | This directory comtains data for testing the final pipeline
+| `test_data.zip` | This directory comtains data for testing the final pipeline. You can directly upload this file in the streamlit app. It will run inference on all images and display the output images.
 | `training` | This directory contains colab notebooks which i used for training my models
 | `weights` | This directory contains all the final model which are being used in my `inference.py`
 | `dataset.zip` | This is the zip file for datasets which i used for training person detection and ppe detection model

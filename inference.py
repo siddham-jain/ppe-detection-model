@@ -91,17 +91,18 @@ def calculate_iou(box, boxes):
     
     return intersection / union
 
-def draw_boxes(image, boxes, classes, scores, colors):
+def draw_boxes(image, boxes, classes, scores, colors, class_mapping):
     for box, cls, score in zip(boxes, classes, scores):
         if cls in colors:  # Only draw boxes for PPE items
             x1, y1, x2, y2 = map(int, box[:4])
             color = colors[cls]
-            label = f"{cls}: {score:.2f}"
+            label = f"{class_mapping[int(cls)]}: {score:.2f}"  # Map class number to name
             cv2.rectangle(image, (x1, y1), (x2, y2), color, 2)
             cv2.putText(image, label, (x1, y1 - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, color, 2)
     return image
 
-def process_image(image_path, person_model, ppe_models, output_dir):
+
+def process_image(image_path, person_model, ppe_models, output_dir, class_mapping):
     image = cv2.imread(image_path)
     person_boxes, person_scores = detect_persons(image, person_model)
     
@@ -136,7 +137,7 @@ def process_image(image_path, person_model, ppe_models, output_dir):
     }
     
     # Draw boxes on the image
-    annotated_image = draw_boxes(image.copy(), all_boxes, all_classes, all_scores, colors)
+    annotated_image = draw_boxes(image.copy(), all_boxes, all_classes, all_scores, colors, class_mapping)
     
     # Save the annotated image
     output_path = os.path.join(output_dir, os.path.basename(image_path))
@@ -152,10 +153,21 @@ def main():
     
     os.makedirs(args.output_dir, exist_ok=True)
     
+    class_mapping = {
+        0: 'hard-hat',
+        1: 'gloves',
+        2: 'mask',
+        3: 'glasses',
+        4: 'boots',
+        5: 'vest',
+        6: 'ppe-suit'
+    }
+    
     for image_file in os.listdir(args.input_dir):
         if image_file.lower().endswith(('.png', '.jpg', '.jpeg')):
             image_path = os.path.join(args.input_dir, image_file)
-            process_image(image_path, person_model, ppe_models, args.output_dir)
+            process_image(image_path, person_model, ppe_models, args.output_dir, class_mapping)
+
 
 if __name__ == "__main__":
     main()
